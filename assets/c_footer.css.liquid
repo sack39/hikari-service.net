@@ -1,24 +1,21 @@
-.footer {
+.c_footer .footer {
     padding-block: 32px;
     background: #eaf6f3;
 }
 
 @media screen and (min-width: 1024px) {
-    .footer {
+    .c_footer .footer {
         padding-block: 56px 32px;
     }
 }
 
-.footer__inner {
-}
-
 @media screen and (min-width: 1024px) {
-    .footer__inner {
+    .c_footer .footer__inner {
         max-width: calc(1240px + 30px * 2);
     }
 }
 
-.footer__wrap {
+.c_footer .footer__wrap {
     display: flex;
     flex-direction: column;
     /* 「footer-item」ぶんのpaddingをマイナス */
@@ -29,24 +26,21 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .footer__wrap {
+    .c_footer .footer__wrap {
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 56px;
     }
 }
 
-.footer__info {
+.c_footer .footer__info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 16px;
 }
 
-.footer__logo {
-}
-
-.footer__logo-text {
+.c_footer .footer__logo-text {
     color: #00b1b0;
     font-feature-settings: "hwid" on;
     font-size: 12px;
@@ -57,13 +51,13 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .footer__logo-text {
+    .c_footer .footer__logo-text {
         font-size: 15px;
         letter-spacing: 1.2px;
     }
 }
 
-.footer__logo-image {
+.c_footer .footer__logo-image {
     display: block;
     aspect-ratio: 136 / 45;
     width: 136px;
@@ -71,20 +65,20 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .footer__logo-image {
+    .c_footer .footer__logo-image {
         aspect-ratio: 180 / 59;
         width: 180px;
         height: 59px;
     }
 }
 
-.footer__logo-image img {
+.c_footer .footer__logo-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.footer__company-name {
+.c_footer .footer__company-name {
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
@@ -93,13 +87,13 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .footer__company-name {
+    .c_footer .footer__company-name {
         font-size: 16px;
         letter-spacing: 1.28px;
     }
 }
 
-.footer__company-address {
+.c_footer .footer__company-address {
     margin-top: 4px;
     font-size: 13px;
     font-weight: 500;
@@ -109,29 +103,26 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .footer__company-address {
-    font-size: 14px;
-    letter-spacing: 1.12px;
+    .c_footer .footer__company-address {
+        font-size: 14px;
+        letter-spacing: 1.12px;
     }
 }
 
-.footer__nav {
-}
-
 @media screen and (min-width: 1024px) {
-    .footer__nav {
+    .c_footer .footer__nav {
     /* 「footer__inner」ぶんのpaddingをマイナス */
         padding-inline: clamp(0rem, -11.13rem + 17.39vw, 3rem) calc(48px - 30px);
     }
 }
 
-.footer-lists {
+.c_footer .footer-lists {
     display: flex;
     flex-direction: column;
 }
 
 @media screen and (min-width: 1024px) {
-    .footer-lists {
+    .c_footer .footer-lists {
         flex-direction: row;
         /* 「footer-item」ぶんのpaddingをマイナス */
         gap: clamp(0.625rem, -5.404rem + 9.42vw, 2.25rem);
@@ -139,7 +130,7 @@
     }
 }
 
-.footer-item {
+.c_footer .footer-item {
     display: block;
     width: fit-content;
     font-weight: 700;
@@ -149,29 +140,29 @@
     transition: color 0.5s;
 }
 
-.footer-item:hover {
+.c_footer .footer-item:hover {
     color: #4ac8c7;
 }
 
 @media screen and (min-width: 1024px) {
-    .footer-item {
+    .c_footer .footer-item {
     /* padding分をマイナス */
         margin-top: -10px;
     }
 }
 
-.footer__copy {
+.c_footer .footer__copy {
     margin-top: 25px;
 }
 
 @media screen and (min-width: 768px) {
-    .footer__copy {
+    .c_footer .footer__copy {
         margin-top: 56px;
         text-align: center;
     }
 }
 
-.footer__copyright {
+.c_footer .footer__copyright {
     color: #959595;
     font-size: 10px;
     font-weight: 500;
@@ -180,18 +171,18 @@
 }
 
 @media screen and (min-width: 768px) {
-    .footer__copyright {
+    .c_footer .footer__copyright {
         font-size: 12px;
         letter-spacing: 0.96px;
     }
 }
 
 /* TOPへ戻るボタン */
-.footer__info {
+.c_footer .footer__info {
     position: relative;
 }
 
-.to-top {
+.c_footer .to-top {
     background: #eaf6f3;
     border-radius: 50%;
     border: 1px solid #4ac8c7;
@@ -199,7 +190,7 @@
     transition: background-color 0.3s;
 }
 
-.to-top::after {
+.c_footer .to-top::after {
     content: "";
     mask-image: url("{{ 'c_icon_arrow-right.svg' | asset_url }}");
     mask-repeat: no-repeat;
@@ -213,15 +204,15 @@
     transition: background-color 0.3s;
 }
 
-.to-top:hover {
+.c_footer .to-top:hover {
     background: #4AC8C7;
 }
 
-.to-top:hover::after {
+.c_footer .to-top:hover::after {
     background-color: #FDFDFD;
 }
 
-.to-top--sp {
+.c_footer .to-top--sp {
     display: block !important;
     width: 48px;
     height: 48px;
@@ -229,27 +220,27 @@
     right: 0;
 }
 
-.to-top--sp::after {
+.c_footer .to-top--sp::after {
     width: 24px;
     height: 24px;
 }
 
 @media screen and (min-width: 1024px) {
-    .to-top--sp {
+    .c_footer .to-top--sp {
         display: none !important;
     }
 }
 
-.to-top--pc {
+.c_footer .to-top--pc {
     display: none !important;
 }
 
 @media screen and (min-width: 1024px) {
-    .footer__copy {
+    .c_footer .footer__copy {
         position: relative;
     }
 
-    .to-top--pc {
+    .c_footer .to-top--pc {
         display: block !important;
         width: 64px;
         height: 64px;
@@ -258,7 +249,7 @@
         transform: translateY(-50%);
     }
 
-    .to-top--pc::after {
+    .c_footer .to-top--pc::after {
         width: 36px;
         height: 36px;
     }

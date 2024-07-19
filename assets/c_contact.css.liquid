@@ -1,14 +1,14 @@
-.contact {
+.c_contact .contact {
     padding-block: 40px;
     background: url("{{ 'c_bg_contact.webp' | asset_url }}") no-repeat center center / cover;
 }
 
 @media screen and (min-width: 768px) {
-    .contact {
+    .c_contact .contact {
         position: relative;
         padding-block: 112px 80px;
     }
-    .contact::after {
+    .c_contact .contact::after {
         content: "";
         position: absolute;
         background: linear-gradient(
@@ -24,14 +24,14 @@
 }
 
 @media screen and (min-width: 768px) {
-    .contact__inner {
+    .c_contact .contact__inner {
         position: relative;
         z-index: 1;
         max-width: calc(1240px + 30px * 2);
     }
 }
 
-.contact__box {
+.c_contact .contact__box {
     width: 100%;
     /* width: 335px; */
     border-radius: 16px;
@@ -41,26 +41,26 @@
 }
 
 @media screen and (min-width: 768px) {
-    .contact__box {
+    .c_contact .contact__box {
         width: 100%;
         padding: 56px 0px;
     }
 }
 
-.contact__heading-en {
+.c_contact .contact__heading-en {
     color: #fdfdfd;
 }
 
-.contact__heading-ja {
+.c_contact .contact__heading-ja {
     margin-top: 16px;
 }
 
-.contact__text-box {
+.c_contact .contact__text-box {
     margin-top: 16px;
     padding-inline:  12px;
 }
 
-.contact__text {
+.c_contact .contact__text {
     text-align: center;
     font-size: 13px;
     font-weight: 500;
@@ -69,53 +69,53 @@
 }
 
 @media screen and (min-width: 768px) {
-    .contact__text {
+    .c_contact .contact__text {
         font-size: 16px;
         line-height: 180%;
         letter-spacing: 1.28px;
     }
 }
 
-.button--contact {
-    margin-top: 24px!important;
-    background: #f5b561!important;
-    border: 2px solid currentColor!important;
-    margin-inline: auto!important;
-    padding: 12px 32px!important;
-    max-width: 270px!important;
+.c_contact .button--contact {
+    margin-top: 24px;
+    background: #f5b561;
+    border: 2px solid currentColor;
+    margin-inline: auto;
+    padding: 12px 32px;
+    max-width: 270px;
 }
 
 @media screen and (min-width: 768px) {
-    .button--contact {
+    .c_contact .button--contact {
         max-width: 337px;
     }
 }
 
-.button--contact__circle {
-    background-color: #fdfdfd!important;
+.c_contact .button--contact__circle {
+    background-color: #fdfdfd;
 }
 
-.button--contact__circle::after {
-    mask-image: url("{{ 'c_icon_mail.svg' | asset_url }}")!important;
-    background-color: #f5b561!important;
-    width: 21px!important;
-    height: 16px!important;
+.c_contact .button--contact__circle::after {
+    mask-image: url("{{ 'c_icon_mail.svg' | asset_url }}");
+    background-color: #f5b561;
+    width: 21px;
+    height: 16px;
 }
 
 
 /* ボタンホバー時アニメーション */
-.button--contact::before {
-    background: #FDFDFD!important;
+.c_contact .button--contact::before {
+    background: #FDFDFD;
 }
 
-.button--contact:hover >.button--contact__circle {
-    background: #F5B561!important;
+.c_contact .button--contact:hover >.button--contact__circle {
+    background: #F5B561;
 }
 
-.button--contact:hover >.button--contact__circle::after {
-    background: #FDFDFD!important;
+.c_contact .button--contact:hover >.button--contact__circle::after {
+    background: #FDFDFD;
 }
 
-.button--contact:hover {
-    color: #F5B561!important;
+.c_contact .button--contact:hover {
+    color: #F5B561;
 }

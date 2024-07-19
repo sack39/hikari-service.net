@@ -174,7 +174,7 @@
                                 </a>
                             </li>
 
-                            <li class="splide__slide works-slide">
+                            {% comment %} <li class="splide__slide works-slide">
                                 <a
                                 href="https://ditripper.com/"
                                 class="works-item"
@@ -201,7 +201,7 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
+                            </li> {% endcomment %}
 
                             <li class="splide__slide works-slide">
                                 <a
@@ -277,6 +277,8 @@
             gap: 12,
             autoWidth: true,
             drag: "free",
+            snap: true,
+            flickPower: number = 600,
             focus: "center",
             autoScroll: {
                 pauseOnHover: false,
@@ -287,7 +289,7 @@
                 768: {
                 gap: 24,
                 autoScroll: {
-                    speed: 1.5,
+                    speed: 1.2,
                 },
                 },
                 2200: {
@@ -312,7 +314,7 @@
 {
     "name": "c_works",
     "tag": "section",
-    "class": "section",
+    "class": "section c_works",
     "presets": [
         {
             "name": "c_works"

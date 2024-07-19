@@ -1,4 +1,4 @@
-.about {
+.c_about .about {
     background: linear-gradient(180deg, #eaf6f3 42.59%, #fdfdfd 100%);
     padding-block: 64px 40px;
     width: 100%;
@@ -6,57 +6,57 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .about {
+    .c_about .about {
         padding-block: 112px 80px;
     }
 }
 
-.about__inner {
+.c_about .about__inner {
     padding-inline: initial;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__inner {
+    .c_about .about__inner {
         display: flex;
         padding-inline: 30px;
     }
 }
 
-.about__wrap {
+.c_about .about__wrap {
     padding-inline: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__wrap {
+    .c_about .about__wrap {
         padding-inline: initial;
     }
 }
 
 
-.about__heading-en {
+.c_about .about__heading-en {
         justify-content: flex-start;
         letter-spacing: 1.2px;
         font-size: 12px;
 }
 
-.about__contents {
-margin-top: 40px;
+.c_about .about__contents {
+    margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__contents {
+    .c_about .about__contents {
         margin-top: 56px;
         width: clamp(31.313rem, 15.313rem + 25vw, 32.5rem);
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .about__heading-ja {
+    .c_about .about__heading-ja {
         white-space: nowrap;
     }
 }
 
-.about__text {
+.c_about .about__text {
     margin-top: 32px;
     text-align: justify;
     font-size: 14px;
@@ -68,7 +68,7 @@ margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__text {
+    .c_about .about__text {
         font-size: 16px;
         letter-spacing: 1.28px;
         padding-right: 86px;
@@ -85,7 +85,7 @@ margin-top: 40px;
     }
 }
 
-.about__image {
+.c_about .about__image {
     padding-block: 40px 68px;
     position: relative;
     width: 100%;
@@ -93,13 +93,13 @@ margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__image {
+    .c_about .about__image {
         overflow: initial;
         padding-block: initial;
     }
 }
 
-.about__image-main {
+.c_about .about__image-main {
     display: block;
     width: 355px;
     height: 355px;
@@ -113,7 +113,7 @@ margin-top: 40px;
     overflow: hidden;
 }
 
-.about__image-main::after {
+.c_about .about__image-main::after {
     content: "";
     position: absolute;
     width: 355px;
@@ -128,13 +128,13 @@ margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__image-main {
+    .c_about .about__image-main {
         width: clamp(31.25rem, 11.039rem + 31.58vw, 32.75rem);
         height: clamp(31.25rem, 11.039rem + 31.58vw, 32.75rem);
         margin-top: 20px;
     }
 
-    .about__image-main::after {
+    .c_about .about__image-main::after {
         width: clamp(31.25rem, 11.039rem + 31.58vw, 32.75rem);
         height: clamp(31.25rem, 11.039rem + 31.58vw, 32.75rem);
         background: linear-gradient(
@@ -146,16 +146,16 @@ margin-top: 40px;
     }
 }
 
-.about__image-deco1,
-.about__image-deco2,
-.about__image-deco3 {
+.c_about .about__image-deco1,
+.c_about .about__image-deco2,
+.c_about .about__image-deco3 {
     display: block;
     flex-shrink: 0;
     border-radius: 50%;
     position: absolute;
 }
 
-.about__image-deco1 {
+.c_about .about__image-deco1 {
     width: 36px;
     height: 36px;
     background-color: rgba(245, 181, 97, 0.8);
@@ -165,7 +165,7 @@ margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__image-deco1 {
+    .c_about .about__image-deco1 {
         width: 48px;
         height: 48px;
 
@@ -176,7 +176,7 @@ margin-top: 40px;
     }
 }
 
-.about__image-deco2 {
+.c_about .about__image-deco2 {
     width: 60px;
     height: 60px;
     background-color: rgba(245, 181, 97, 0.5);
@@ -185,7 +185,7 @@ margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__image-deco2 {
+    .c_about .about__image-deco2 {
         width: 80px;
         height: 80px;
 
@@ -196,7 +196,7 @@ margin-top: 40px;
     }
 }
 
-.about__image-deco3 {
+.c_about .about__image-deco3 {
     width: 120px;
     height: 120px;
     background-color: rgba(156, 221, 222, 0.5);
@@ -206,7 +206,7 @@ margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__image-deco3 {
+    .c_about .about__image-deco3 {
         width: 140px;
         height: 140px;
 
@@ -217,7 +217,7 @@ margin-top: 40px;
     }
 }
 
-.about__image-people {
+.c_about .about__image-people {
     display: block;
     background: url("{{ 'c_deco_about1.webp' | asset_url }}") no-repeat center center / cover;
     width: 202px;
@@ -229,7 +229,7 @@ margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__image-people {
+    .c_about .about__image-people {
         width: 253px;
         height: 170px;
 
@@ -240,7 +240,7 @@ margin-top: 40px;
     }
 }
 
-.about__image-man {
+.c_about .about__image-man {
     display: block;
     background: url("{{ 'c_deco_about2.webp' | asset_url }}") no-repeat center center / cover;
     width: 65px;
@@ -252,7 +252,7 @@ margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about__image-man {
+    .c_about .about__image-man {
         width: 79px;
         height: 169px;
 

@@ -1,0 +1,103 @@
+{{ 'c_base.css' | asset_url | stylesheet_tag }}
+{{ 'c_service.css' | asset_url | stylesheet_tag }}
+
+<section id="service" class="service">
+    <div class="service__bg"></div>
+    <div class="service__inner inner">
+    <div class="heading service__heading">
+        <h2 class="heading-en service__heading-en js-in-view fade-in-up">
+            SERVICE
+        </h2>
+        <p class="heading-ja service__heading-ja js-in-view fade-in-up">
+            <span class="heading-ja text-highlight">制作から集客まで</span><br class="pc-hidden" />
+            幅広くサポート
+        </p>
+    </div>
+
+    <div class="service__list-wrap">
+        <ul class="service__list">
+        <li class="service__item service-item js-in-view fade-in">
+            <div class="service-item__image">
+            <img
+                src="{{ 'c_icon_homepage.png' | asset_url }}"
+                alt="ホームページ制作"
+                width="94.169"
+                height="76.8"
+                loading="lazy"
+            />
+            </div>
+            <div class="service-item__contents">
+            <h3 class="service-item__title">ホームページ制作</h3>
+            <p class="service__description">
+                本格的なプランからお手軽・お急ぎプランまで、幅広くご提案いたします。
+            </p>
+            </div>
+        </li>
+        <li class="service__item service-item js-in-view fade-in">
+            <div class="service-item__image">
+            <img
+                src="{{ 'c_icon_ec.png' | asset_url }}"
+                alt="オンラインストア制作"
+                width="79.212"
+                height="76.803"
+                loading="lazy"
+            />
+            </div>
+            <div class="service-item__contents">
+            <h3 class="service-item__title">オンラインストア制作</h3>
+            <p class="service__description">
+                世界最大級のECプラットフォーム・Shopifyを用いたストア制作を行います。
+            </p>
+            </div>
+        </li>
+        <li class="service__item service-item js-in-view fade-in">
+            <div class="service-item__image">
+            <img
+                src="{{ 'c_icon_operation.png' | asset_url }}"
+                alt="運用・保守サポート"
+                width="76.867"
+                height="76.803"
+                loading="lazy"
+            />
+            </div>
+            <div class="service-item__contents">
+            <h3 class="service-item__title">運用・保守サポート</h3>
+            <p class="service__description">
+                作って終わりでなく、サイト公開後の運用・保守までサポートいたします。
+            </p>
+            </div>
+        </li>
+        <li class="service__item service-item js-in-view fade-in">
+            <div class="service-item__image">
+            <img
+                src="{{ 'c_icon_web-marketing.png' | asset_url }}"
+                alt="Webコンサルティング"
+                width="95.843"
+                height="76.803"
+                loading="lazy"
+            />
+            </div>
+            <div class="service-item__contents">
+            <h3 class="service-item__title">Webコンサルティング</h3>
+            <p class="service__description">
+                SNS活用、SEO対策、LINE構築など、Webの強みを活かしたご提案を行います。
+            </p>
+            </div>
+        </li>
+        </ul>
+    </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "c_service",
+    "tag": "section",
+    "class": "section",
+    "presets": [
+        {
+            "name": "c_service"
+        }
+    ]
+}
+{% endschema %}

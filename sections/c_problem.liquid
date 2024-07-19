@@ -1,0 +1,67 @@
+{{ 'c_base.css' | asset_url | stylesheet_tag }}
+{{ 'c_problem.css' | asset_url | stylesheet_tag }}
+
+<section class="problem">
+    <div class="problem__inner inner">
+        <div class="problem__bg">
+        <div class="heading problem__heading">
+            <h2 class="heading-en problem__heading-en js-in-view fade-in-up">
+                PROBLEM
+            </h2>
+            <p class="heading-ja problem__heading-ja js-in-view fade-in-up">
+                こんな<span class="heading-ja text-highlight">お困りごと</span><br class="pc-hidden" />
+                ありませんか？
+            </p>
+        </div>
+
+        <div class="problem__wrap">
+            <div class="problem__voice js-in-view fade-in">
+            <p class="problem__voice-text">
+                ホームページやオンラインストアを<br />制作したいけれど、<br />
+                <span class="text-highlight">周りに相談できる人がいない</span>
+            </p>
+            </div>
+            <div class="problem__voice js-in-view fade-in">
+            <p class="problem__voice-text">
+                サービスをPRしたいが、<br />
+                <span class="text-highlight">Webのことは詳しくない</span>ので<br />
+                <span class="text-highlight">何から始めていいか分からない</span>
+            </p>
+            </div>
+            <div class="problem__voice js-in-view fade-in">
+            <p class="problem__voice-text">
+                サイト制作だけでなく、<br />
+                <span class="text-highlight">その後の運用や集客についても<br />
+                サポートしてほしい</span>
+            </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="problem__image js-in-view fade-in"></div>
+        <div class="problem__solution">
+        <p class="problem__solution-text js-in-view fade-in-up">
+            こうしたお悩み、<br class="pc-hidden" />
+            <span class="text-highlight text-bold">ひかりサービス</span>が<span class="text-highlight text-bold">解決</span>できます！
+        </p>
+        </div>
+    </div>
+    </section>
+
+
+<style>
+
+</style>
+
+{% schema %}
+{
+    "name": "c_problem",
+    "tag": "section",
+    "class": "section",
+    "presets": [
+        {
+            "name": "c_problem"
+        }
+    ]
+}
+{% endschema %}

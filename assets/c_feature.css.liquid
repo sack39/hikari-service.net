@@ -1,0 +1,243 @@
+.feature {
+    background: #eaf6f3;
+    padding-block: 64px;
+}
+
+.feature__wrap {
+    margin-top: 40px;
+}
+
+.feature__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .feature__list {
+        gap: 56px;
+    }
+}
+
+.feature__item {
+    border-radius: 20px;
+    background: #fdfdfd;
+    overflow: hidden;
+    max-width: 335px;
+}
+
+@media screen and (min-width: 768px) {
+    .feature__item {
+        display: flex;
+        max-width: initial;
+        max-height: 399px;
+    }
+
+    .feature__item:nth-of-type(2n - 1) {
+        flex-direction: row-reverse;
+    }
+}
+
+.feature-item {
+}
+
+.feature-item__textbox {
+    padding: 32px clamp(0.75rem, -0.705rem + 7.27vw, 1rem);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .feature-item__textbox {
+        flex-shrink: 0;
+    }
+
+    .feature__item:nth-of-type(2n) > .feature-item__textbox {
+        width: min(584px , 56.15vw);
+    }
+
+    .feature__item:nth-of-type(2n - 1) > .feature-item__textbox {
+        width: min(564px , 54.23vw);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .feature-item__textbox {
+        padding: 32px;
+    }
+}
+
+.feature-item__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding-bottom: 24px;
+    border-bottom: 2px dashed #4ac8c7;
+}
+
+@media screen and (min-width: 1024px) {
+    .feature-item__title {
+        gap: 16px;
+    }
+}
+
+.feature-item__title-number {
+    width: clamp(3.125rem, 1.67rem + 7.27vw, 3.375rem);
+    height: clamp(3.125rem, 1.67rem + 7.27vw, 3.375rem);
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    display: grid;
+    place-items: center;
+    color: #4ac8c7;
+    font-family: "Libre Baskerville";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    flex-shrink: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .feature-item__title-number {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+}
+
+.feature-item__title-text {
+    font-size: clamp(0.875rem, -0.58rem + 7.27vw, 1.125rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1.44px;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+    .feature-item__title-text {
+        font-size: 28px;
+        letter-spacing: 2.24px;
+    }
+}
+
+
+.feature-item__text {
+    text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+    .feature-item__image img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+}
+
+.feature-item:nth-of-type(3) > .feature-item__image {
+    position: relative;
+}
+
+.feature-item__infographic {
+    border-radius: 17.739px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
+
+.feature-item__infographic-item {
+    color: #fdfdfd;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1.6px;
+    width: 118px;
+    height: 80px;
+    background: rgba(156, 221, 222, 0.8);
+    display: grid;
+    place-items: center;
+}
+
+.feature-item__infographic-item:nth-child(1) {
+    border-top-left-radius: 17.739px;
+}
+
+.feature-item__infographic-item:nth-child(2) {
+    border-top-right-radius: 17.739px;
+}
+
+.feature-item__infographic-item:nth-child(3) {
+    border-bottom-left-radius: 17.739px;
+}
+
+.feature-item__infographic-item:nth-child(4) {
+    border-bottom-right-radius: 17.739px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .feature-item__infographic-item {
+    font-size: 28px;
+    letter-spacing: 2.24px;
+    width: 160px;
+    height: 150px;
+    }
+
+    .feature-item__infographic-item:nth-child(1) {
+    border-top-left-radius: 24px;
+    }
+
+    .feature-item__infographic-item:nth-child(2) {
+    border-top-right-radius: 24px;
+    transition-delay: 0.5s;
+    }
+
+    .feature-item__infographic-item:nth-child(3) {
+    border-bottom-left-radius: 24px;
+    transition-delay: 1s;
+    }
+
+    .feature-item__infographic-item:nth-child(4) {
+    border-bottom-right-radius: 24px;
+    transition-delay: 1.5s;
+    }
+}
+
+/* hokkaido */
+.feature-item:nth-of-type(1) > .feature-item__textbox > .feature-item__title {
+    position: relative;
+}
+
+.feature-item:nth-of-type(1)
+    > .feature-item__textbox
+    > .feature-item__title::after {
+    content: "";
+    position: absolute;
+    background: url("{{ 'c_deco_features.webp' | asset_url }}") no-repeat center center / contain;
+    width: 98.643px;
+    height: 96.349px;
+    top: -22px;
+    right: -9.64px;
+}
+
+@media screen and (min-width: 1024px) {
+    .feature-item:nth-of-type(1)
+    > .feature-item__textbox
+    > .feature-item__title::after {
+        width: 148.452px;
+        height: 145px;
+        top: -12px;
+        right: 0;
+        z-index: -1;
+    }
+}

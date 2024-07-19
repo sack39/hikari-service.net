@@ -1,0 +1,44 @@
+{{ 'c_base.css' | asset_url | stylesheet_tag }}
+{{ 'c_contact.css' | asset_url | stylesheet_tag }}
+
+<section class="contact">
+    <div class="contact__inner inner">
+        <div class="contact__box">
+            <div class="heading contact__heading">
+                <h2 class="heading-en contact__heading-en js-in-view fade-in-up">
+                    CONTACT
+                </h2>
+                <p class="heading-ja contact__heading-ja js-in-view fade-in">
+                    まずはお気軽に<br class="md-hidden" />
+                    ご相談ください。
+                </p>
+            </div>
+            <div class="contact__text-box">
+                <p class="contact__text js-in-view fade-in">
+                    お客さまの不安やお困りごとを解消しながら、現実的かつ最適なプランをご提案いたします。<br />
+                    些細なお困りごとでも、まずはお気軽にご相談ください。
+                </p>
+            </div>
+            <a
+                href="https://hikari-service.net/pages/contact"
+                class="button--common button--contact js-in-view fade-in"
+            >
+                <span class="button--common__circle button--contact__circle"></span>
+                <span class="button--common__text button--contact__text">お問い合わせはこちら</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "c_contact",
+    "tag": "section",
+    "class": "section",
+    "presets": [
+        {
+            "name": "c_contact"
+        }
+    ]
+}
+{% endschema %}

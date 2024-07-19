@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "c_to_contact_8UYweg": {
@@ -10,42 +19,42 @@
       "settings": {
       }
     },
-    "c_about_J843jK": {
+    "c_about_xFrrYe": {
       "type": "c_about",
       "settings": {
       }
     },
-    "c_service_QBgdrV": {
+    "c_service_UinR66": {
       "type": "c_service",
       "settings": {
       }
     },
-    "c_problem_DAVBRy": {
+    "c_problem_beF73Y": {
       "type": "c_problem",
       "settings": {
       }
     },
-    "c_feature_XjJRUC": {
+    "c_feature_zhmiFz": {
       "type": "c_feature",
       "settings": {
       }
     },
-    "c_works_qXqEBz": {
+    "c_works_MhYeEx": {
       "type": "c_works",
       "settings": {
       }
     },
-    "c_plans_aW8jGG": {
+    "c_plans_ffj6pT": {
       "type": "c_plans",
       "settings": {
       }
     },
-    "c_blog_AhACby": {
+    "c_blog_tAeNW9": {
       "type": "c_blog",
       "settings": {
       }
     },
-    "c_contact_7gPETP": {
+    "c_contact_7XYcxp": {
       "type": "c_contact",
       "settings": {
       }

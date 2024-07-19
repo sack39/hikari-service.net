@@ -9,11 +9,6 @@
 */
 {
   "sections": {
-    "c_to_contact_MiafrU": {
-      "type": "c_to-contact",
-      "settings": {
-      }
-    },
     "c_fv_gDRXLY": {
       "type": "c_fv",
       "settings": {
@@ -61,7 +56,6 @@
     }
   },
   "order": [
-    "c_to_contact_MiafrU",
     "c_fv_gDRXLY",
     "c_about_xFrrYe",
     "c_service_UinR66",

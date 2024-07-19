@@ -11,6 +11,11 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "c_footer_WEyw36": {
+      "type": "c_footer",
+      "settings": {
+      }
+    },
     "footer": {
       "type": "footer",
       "disabled": true,
@@ -31,6 +36,7 @@
     }
   },
   "order": [
+    "c_footer_WEyw36",
     "footer"
   ]
 }

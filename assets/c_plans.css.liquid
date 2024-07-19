@@ -1,4 +1,4 @@
-.plans {
+.c_plans .plans {
     background: #f8f8f8;
     padding-block: 64px;
     position: relative;
@@ -6,12 +6,12 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .plans {
+    .c_plans .plans {
         padding-block: 112px;
     }
 }
 
-.plans::after {
+.c_plans .plans::after {
     content: "";
     position: absolute;
     top: calc(433px + 13.6vw);
@@ -23,12 +23,12 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .plans::after {
+    .c_plans .plans::after {
         display: none;
     }
 }
 
-.plans__bg {
+.c_plans .plans__bg {
     position: absolute;
     display: block !important;
     background: url("{{ 'c_deco_circle-bg.png' | asset_url }}") no-repeat center center / cover;
@@ -39,35 +39,35 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .plans__bg {
-    background: url("{{ 'c_deco_circle-bg-pc.webp' | asset_url }}") no-repeat center center / cover;
-    height: max(368px, 25.56vw);
-    top: initial;
-    bottom: 0;
+    .c_plans .plans__bg {
+        background: url("{{ 'c_deco_circle-bg-pc.webp' | asset_url }}") no-repeat center center / cover;
+        height: max(368px, 25.56vw);
+        top: initial;
+        bottom: 0;
     }
 }
 
-.plans__inner {
+.c_plans .plans__inner {
     position: relative;
     z-index: 1;
 }
 
 
-.plans__heading-description {
+.c_plans .plans__heading-description {
     margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
-    .plans__heading-description {
+    .c_plans .plans__heading-description {
         margin-top: 32px;
     }
 }
 
-.plans__price {
+.c_plans .plans__price {
     margin-top: 32px;
 }
 
-.plans__price-lists {
+.c_plans .plans__price-lists {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,13 +76,13 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .plans__price-lists {
+    .c_plans .plans__price-lists {
         flex-direction: row;
         gap: 10px;
     }
 }
 
-.price-item__bg {
+.c_plans .price-item__bg {
     border-radius: 16px;
     overflow: hidden;
     border: 2px solid #4ac8c7;
@@ -91,32 +91,32 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .price-item__bg {
+    .c_plans .price-item__bg {
         width: 340px;
         max-width: initial;
     }
 
-    .price-item__bg:nth-of-type(2) {
+    .c_plans .price-item__bg:nth-of-type(2) {
         transition-delay: 0.5s;
     }
 
-    .price-item__bg:nth-of-type(3) {
+    .c_plans .price-item__bg:nth-of-type(3) {
         transition-delay: 1s;
     }
 }
 
-.plans__price-item {
+.c_plans .plans__price-item {
     width: 100%;
     height: 100%;
 }
 
 
-.price-item__title {
+.c_plans .price-item__title {
     background: #4ac8c7;
     text-align: center;
 }
 
-.price-item__title-text {
+.c_plans .price-item__title-text {
     color: #fdfdfd;
     padding-block: 16px;
     font-size: clamp(0.938rem, 0.271rem + 3.33vw, 1rem);
@@ -126,28 +126,28 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .price-item__title-text {
+    .c_plans .c_plans .price-item__title-text {
         padding-block: 20px;
         font-size: clamp(1rem, 0.273rem + 1.14vw, 1.125rem);
         letter-spacing: 1.44px;
     }
 }
 
-.price-item__contents {
+.c_plans .price-item__contents {
     padding: 16px 16px 20px;
 }
 
 @media screen and (min-width: 1024px) {
-    .price-item__contents {
+    .c_plans .price-item__contents {
         padding: 16px 16px 24px;
     }
 }
 
-.price-item__price {
+.c_plans .price-item__price {
     text-align: center;
 }
 
-.price-item__price-mark {
+.c_plans .price-item__price-mark {
     color: #00b1b0;
     font-feature-settings: "hwid" on;
     font-family: "Libre Baskerville";
@@ -156,14 +156,14 @@
     line-height: 100%;
 }
 
-.price-item__price-pricing {
+.c_plans .price-item__price-pricing {
     color: #00b1b0;
     font-size: 36px;
     font-weight: 900;
     line-height: 100%;
 }
 
-.price-item__price-tax {
+.c_plans .price-item__price-tax {
     color: #00b1b0;
     font-feature-settings: "halt" on;
     font-size: 16px;
@@ -171,7 +171,7 @@
     line-height: 100%;
 }
 
-.price-item__target {
+.c_plans .price-item__target {
     margin-top: 12px;
     padding: 16px;
     border-radius: 4px;
@@ -184,12 +184,12 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .price-item__target {
+    .c_plans .price-item__target {
         border-radius: 10px;
     }
 }
 
-.price-item__target-title {
+.c_plans .price-item__target-title {
     color: #4ac8c7;
     font-weight: 700;
     line-height: 150%;
@@ -201,7 +201,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .price-item__target-title {
+    .c_plans .price-item__target-title {
         font-size: 15px;
         font-weight: 700;
         line-height: 150%;
@@ -210,11 +210,11 @@
     }
 }
 
-.price-item__target-image {
+.c_plans .price-item__target-image {
     display: block !important;
 }
 
-.price-item__bg:nth-of-type(1)
+.c_plans .price-item__bg:nth-of-type(1)
     > .price-item
     > .price-item__contents
     > .price-item__target
@@ -234,7 +234,7 @@
     background: url("{{ 'c_deco_plan2.webp' | asset_url }}") no-repeat center center / cover;
 }
 
-.price-item__bg:nth-of-type(3)
+.c_plans .price-item__bg:nth-of-type(3)
     > .price-item
     > .price-item__contents
     > .price-item__target
@@ -245,7 +245,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .price-item__bg:nth-of-type(3)
+    .c_plans .price-item__bg:nth-of-type(3)
     > .price-item
     > .price-item__contents
     > .price-item__target
@@ -255,10 +255,7 @@
     }
 }
 
-.price-item__target-lists {
-}
-
-.price-item__target-item {
+.c_plans .price-item__target-item {
     font-size: 13px;
     line-height: 200%;
     letter-spacing: 1.04px;
@@ -268,14 +265,14 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .price-item__target-item {
+    .c_plans .price-item__target-item {
         font-size: clamp(0.813rem, 0.449rem + 0.57vw, 0.875rem);
         letter-spacing: 1.12px;
         white-space: nowrap;
     }
 }
 
-.price-item__target-item::before {
+.c_plans .price-item__target-item::before {
     content: "";
     width: 10px;
     height: 10px;
@@ -283,21 +280,21 @@
     background: #f5b561;
 }
 
-.button--plan {
+.c_plans .button--plan {
     margin-top: 40px;
     margin-inline: auto;
 }
 
 @media screen and (min-width: 1024px) {
-    .button--plan {
+    .c_plans .button--plan {
         margin-top: 32px;
     }
 }
 
 /* ホバー時アニメーション */
-.price-item {
+.c_plans .price-item {
     transition: opacity 0.5s;
 }
-.price-item:hover {
+.c_plans .price-item:hover {
     opacity: 0.8;
 }

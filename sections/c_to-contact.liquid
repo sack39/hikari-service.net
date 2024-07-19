@@ -1,0 +1,104 @@
+{{ 'c_base.css' | asset_url | stylesheet_tag }}
+
+<section class="fv">
+    <a href="https://hikari-service.net/pages/contact" class="to-contact"></a>
+</section>
+
+<style>
+    .c_to-contact .to-contact {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 30;
+        width: 72px;
+        height: 72px;
+        background-color: #f5b561;
+        border-radius: 50%;
+        border: 1px solid #fdfdfd;
+        display: block !important;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .c_to-contact .to-contact {
+            top: initial;
+            bottom: 40px;
+            right: 40px;
+            width: clamp(4.5rem, 1.071rem + 7.14vw, 7.5rem);
+            height: clamp(4.5rem, 1.071rem + 7.14vw, 7.5rem);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .c_to-contact .to-contact::before {
+            content: "お問い合わせ";
+            color: #fdfdfd;
+            font-size: clamp(0.75rem, 0.442rem + 0.48vw, 0.875rem);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            letter-spacing: 0.28px;
+            white-space: nowrap;
+            position: absolute;
+            top: min(28px , 1.94vw);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .c_to-contact .to-contact::after {
+        content: "";
+        mask-image: url("{{ 'c_icon_mail.svg' | asset_url }}");
+        background-color: #fdfdfd;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        display: block;
+        width: 28px;
+        height: 22px;
+        flex-shrink: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    @media screen and (min-width: 1024px) {
+        .c_to-contact .to-contact::after {
+            width: clamp(2.5rem, 0.962rem + 2.4vw, 3.125rem);
+            height: clamp(1.75rem, 0.673rem + 1.68vw, 2.188rem);
+            top: min(57px , 3.96vw);
+            transform: translateX(-50%);
+        }
+    }
+
+    /* to-contactホバー時アニメーション */
+    .c_to-contact .to-contact {
+        transition: all 0.3s;
+    }
+
+    .c_to-contact .to-contact:hover {
+        background-color: #fdfdfd;
+        border: 1px solid #f5b561;
+    }
+
+    .c_to-contact .to-contact:hover::before {
+        color: #f5b561;
+    }
+
+    .c_to-contact .to-contact:hover::after {
+        background-color: #f5b561;
+    }
+</style>
+
+{% schema %}
+{
+    "name": "c_to-contact",
+    "tag": "section",
+    "class": "section c_to-contact",
+    "presets": [
+        {
+            "name": "c_to-contact"
+        }
+    ]
+}
+{% endschema %}

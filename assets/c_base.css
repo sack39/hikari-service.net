@@ -276,7 +276,7 @@ body.is-fixed {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
-    mask-image: url(./img/icon_arrow-right.svg);
+    mask-image: url("{{ 'c_icon_arrow-right.svg' | asset_url }}");
     background-color: #fdfdfd;
     mask-repeat: no-repeat;
     mask-position: center;

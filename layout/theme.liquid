@@ -252,7 +252,7 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    {% unless section == "header" %}
+    {% unless content_for_header contains 'header' %}
       {{ 'c_base.css' | asset_url | stylesheet_tag }}
     {% endunless %}
 

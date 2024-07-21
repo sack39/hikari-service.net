@@ -11,7 +11,7 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "c_footer_WEyw36": {
+    "c_footer_MgpNFP": {
       "type": "c_footer",
       "settings": {
       }
@@ -36,7 +36,7 @@
     }
   },
   "order": [
-    "c_footer_WEyw36",
+    "c_footer_MgpNFP",
     "footer"
   ]
 }

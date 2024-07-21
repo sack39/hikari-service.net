@@ -244,6 +244,7 @@ body.is-fixed {
     border: 1px solid #4ac8c7;
     border-radius: 999px;
     background: #fdfdfd;
+
     display: flex;
     gap: 16px;
     align-items: center;
@@ -273,10 +274,12 @@ body.is-fixed {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+
     width: 24px;
     height: 24px;
     flex-shrink: 0;
-    mask-image: url("{{ 'c_icon_arrow-right.svg' | asset_url }}");
+
+    mask-image: url(./img/icon_arrow-right.svg);
     background-color: #fdfdfd;
     mask-repeat: no-repeat;
     mask-position: center;

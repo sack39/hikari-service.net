@@ -1,0 +1,247 @@
+.problem {
+  padding-block: 64px 116px;
+}
+
+@media screen and (min-width: 1024px) {
+  .problem {
+    padding-block: 80px 148px;
+  }
+}
+
+.problem__inner {
+  max-width: 1240px;
+}
+
+.problem__bg {
+  border-radius: 16px;
+  padding: 40px 27.5px;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .problem__bg {
+    padding-block: 60px;
+    padding-inline: initial;
+  }
+}
+
+.problem__bg::before,
+.problem__bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.problem__bg::before {
+  background: url(./img/bg_problem.webp) no-repeat center center / cover;
+  opacity: 0.5;
+}
+
+.problem__bg::after {
+  background: linear-gradient(
+    0deg,
+    rgba(149, 149, 149, 0.2) 0%,
+    rgba(149, 149, 149, 0.2) 100%
+  );
+}
+
+.problem__heading {
+  position: relative;
+  z-index: 1;
+}
+
+.problem__heading-en {
+}
+
+.problem__heading-ja {
+}
+
+.problem__wrap {
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+@media screen and (min-width: 1024px) {
+  .problem__wrap {
+    margin-top: 32px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: initial;
+
+    max-width: 1040px;
+    margin-inline: auto;
+  }
+}
+
+.problem__voice {
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .problem__voice:nth-of-type(2) {
+    transition-delay: 0.5s;
+  }
+
+  .problem__voice:nth-of-type(3) {
+    transition-delay: 1s;
+  }
+}
+
+.problem__voice::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+}
+
+.problem__voice:nth-of-type(1)::before {
+  width: min(299.501px, 79.73vw);
+  height: min(211px, 56.27vw);
+  background: url(./img/deco_problem-item1.webp) no-repeat center center /
+    contain;
+}
+.problem__voice:nth-of-type(2)::before {
+  width: min(295.501px, 78.67vw);
+  height: min(211px, 56.27vw);
+  background: url(./img/deco_problem-item2.webp) no-repeat center center /
+    contain;
+}
+
+.problem__voice:nth-of-type(3)::before {
+  width: min(300px, 80vw);
+  height: min(211px, 56.27vw);
+  background: url(./img/deco_problem-item3.webp) no-repeat center center /
+    contain;
+}
+
+@media screen and (min-width: 1024px) {
+  .problem__voice:nth-of-type(1)::before,
+  .problem__voice:nth-of-type(2)::before,
+  .problem__voice:nth-of-type(3)::before {
+    width: 320px;
+    height: 225px;
+  }
+}
+
+.problem__voice-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: clamp(0.813rem, -0.521rem + 6.67vw, 0.938rem);
+  font-weight: 700;
+  line-height: 180%;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  text-align: center;
+
+  z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .problem__voice-text {
+    font-size: 16px;
+    letter-spacing: 1.28px;
+  }
+}
+
+.problem__voice:nth-of-type(1) > .problem__voice-text {
+  top: min(58px, 15.47vw);
+}
+
+.problem__voice:nth-of-type(2) > .problem__voice-text {
+  top: min(58px, 15.47vw);
+}
+
+.problem__voice:nth-of-type(3) > .problem__voice-text {
+  top: min(55.3px, 14.75vw);
+}
+
+@media screen and (min-width: 1024px) {
+  .problem__voice:nth-of-type(3) > .problem__voice-text {
+    top: 59px;
+  }
+}
+
+.problem__image {
+  display: block !important;
+  background: url(./img/deco_problem.webp) no-repeat center center / contain;
+  width: 300px;
+  height: 170px;
+
+  margin-top: -26px;
+  margin-inline: auto;
+
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .problem__image {
+    width: 400px;
+    height: 201px;
+
+    margin-top: -28px;
+  }
+}
+
+.problem__solution {
+  margin-top: 36px;
+
+  position: relative;
+}
+
+.problem__solution-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1.6px;
+  text-align: center;
+  border-bottom: 4px solid #4ac8c7;
+
+  width: fit-content;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .problem__solution-text {
+    padding-bottom: 2px;
+    font-size: 32px;
+    letter-spacing: 2.56px;
+  }
+}
+
+.problem__solution::after {
+  content: "";
+  display: block;
+  background: url(./img/icon_double-arrow.png) no-repeat center center / contain;
+  width: 30px;
+  height: 27px;
+
+  position: absolute;
+  top: calc(60px + 45px - 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  .problem__solution::after {
+    width: 50px;
+    height: 45px;
+
+    top: calc(48px + 49px - 4px);
+  }
+}

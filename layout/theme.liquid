@@ -31,6 +31,10 @@
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -252,8 +256,15 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'c_base.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
+    {%- if settings.cart_type == 'drawer' -%}
+      {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+      {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+      {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+      {{ 'component-price.css' | asset_url | stylesheet_tag }}
+      {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -285,20 +296,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-
-
-    <!-- Splide cdn(css) -->
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"/>
-
-    <!-- scroll hint -->
-    <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css"/>
-    <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
-
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet"/>
-
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -372,55 +369,8 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-
-    <!-- splide/autoscroll cdn(js) -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <!-- smooth scroll -->
-    <script>
-      // pc
-      $('a[href^="#"]').on("click", function (e) {
-        const speed = 700;
-        const id = $(this).attr("href");
-        const target = $("#" == id ? "html" : id);
-        const position = $(target).offset().top;
-        $("html,body").animate(
-          {
-            scrollTop: position,
-          },
-          speed,
-          "swing"
-        );
-      });
-
-      // sp
-      $('#js-drawer-content a[href^="#"]').on("click", function (e) {
-        $("#js-drawer-icon").removeClass("is-checked");
-        $("#js-drawer-content").removeClass("is-checked");
-        $("body").removeClass("is-fixed");
-      });
-    </script>
-
-    <!-- fade in/up animation -->
-    <script>
-      const intersectionObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-in-view");
-          } else {
-            // entry.target.classList.remove("is-in-view");
-          }
-        });
-      });
-      const inViewItems = document.querySelectorAll(".js-in-view");
-      inViewItems.forEach(function (inViewItem) {
-        intersectionObserver.observe(inViewItem);
-      });
-    </script>
-
+    {%- if settings.cart_type == 'drawer' -%}
+      <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
   </body>
 </html>

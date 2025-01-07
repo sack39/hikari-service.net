@@ -1,3 +1,5 @@
+{{ 'c_plans.css' | asset_url | stylesheet_tag }}
+
 <section id="price" class="plans">
   <div class="plans__bg"></div>
   <div class="plans__inner inner">
@@ -137,3 +139,18 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "c_plans",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+    ],
+    "presets": [
+      {
+        "name": "c_plans"
+      }
+    ]
+  }
+{% endschema %}

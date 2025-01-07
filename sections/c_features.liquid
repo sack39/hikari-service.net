@@ -1,3 +1,5 @@
+{{ 'c_features.css' | asset_url | stylesheet_tag }}
+
 <section id="reason" class="feature">
   <div class="feature__inner inner">
     <div class="heading feature__heading">
@@ -169,3 +171,18 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "c_features",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+    ],
+    "presets": [
+      {
+        "name": "c_features"
+      }
+    ]
+  }
+{% endschema %}

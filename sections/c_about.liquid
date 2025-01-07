@@ -1,3 +1,5 @@
+{{ 'c_about.css' | asset_url | stylesheet_tag }}
+
 <section id="about" class="about">
   <div class="about__inner inner">
     <div class="about__wrap">
@@ -41,3 +43,18 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "c_about",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+    ],
+    "presets": [
+      {
+        "name": "c_about"
+      }
+    ]
+  }
+{% endschema %}

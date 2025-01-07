@@ -1,3 +1,5 @@
+{{ 'c_works.css' | asset_url | stylesheet_tag }}
+
 <section class="works">
   <div class="works__inner inner">
     <div class="heading works__heading">
@@ -274,3 +276,18 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "c_works",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+    ],
+    "presets": [
+      {
+        "name": "c_works"
+      }
+    ]
+  }
+{% endschema %}

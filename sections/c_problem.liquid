@@ -1,3 +1,5 @@
+{{ 'c_problem.css' | asset_url | stylesheet_tag }}
+
 <section class="problem">
   <div class="problem__inner inner">
     <div class="problem__bg">
@@ -50,3 +52,18 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "c_problem",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+    ],
+    "presets": [
+      {
+        "name": "c_problem"
+      }
+    ]
+  }
+{% endschema %}

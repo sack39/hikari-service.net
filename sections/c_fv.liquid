@@ -1,3 +1,5 @@
+{{ 'c_fv.css' | asset_url | stylesheet_tag }}
+
 <section class="fv">
   <div class="fv__image"></div>
   <div class="fv__contents">
@@ -15,3 +17,18 @@
     </p>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "c_fv",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+    ],
+    "presets": [
+      {
+        "name": "c_fv"
+      }
+    ]
+  }
+  {% endschema %}

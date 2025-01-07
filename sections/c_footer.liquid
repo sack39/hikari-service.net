@@ -1,3 +1,5 @@
+{{ 'c_footer.css' | asset_url | stylesheet_tag }}
+
 <section>
   <footer class="footer">
     <div class="footer__inner inner">
@@ -57,3 +59,18 @@
     </div>
   </footer>
 </section>
+
+{% schema %}
+  {
+    "name": "c_footer",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+    ],
+    "presets": [
+      {
+        "name": "c_footer"
+      }
+    ]
+  }
+{% endschema %}

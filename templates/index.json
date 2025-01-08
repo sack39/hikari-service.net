@@ -17,36 +17,36 @@
       "type": "c_about",
       "settings": {}
     },
-    "c_blog_BbNAtH": {
-      "type": "c_blog",
-      "settings": {}
-    },
-    "c_contact_iewfpU": {
-      "type": "c_contact",
+    "c_problem_XWK9Cm": {
+      "type": "c_problem",
       "settings": {}
     },
     "c_features_DUxjPE": {
       "type": "c_features",
       "settings": {}
     },
-    "c_footer_XkatDA": {
-      "type": "c_footer",
+    "c_works_Un3PTf": {
+      "type": "c_works",
       "settings": {}
     },
     "c_plans_fz4eNb": {
       "type": "c_plans",
       "settings": {}
     },
-    "c_problem_XWK9Cm": {
-      "type": "c_problem",
+    "c_blog_BbNAtH": {
+      "type": "c_blog",
       "settings": {}
     },
     "c_service_JX6jgJ": {
       "type": "c_service",
       "settings": {}
     },
-    "c_works_Un3PTf": {
-      "type": "c_works",
+    "c_contact_iewfpU": {
+      "type": "c_contact",
+      "settings": {}
+    },
+    "c_footer_XkatDA": {
+      "type": "c_footer",
       "settings": {}
     }
   },

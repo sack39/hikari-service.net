@@ -22,7 +22,7 @@
 }
 
 .works::before {
-  background: url(./img/bg_works.webp) no-repeat center center / cover;
+  background: url({{ 'c_bg_works.webp' | asset_url }}) no-repeat center center / cover;
 }
 
 .works::after {
@@ -103,7 +103,7 @@
 
 @media screen and (min-width: 1024px) {
   .works-slide {
-    width: 330px;
+    width: 330px!important;
   }
 }
 
@@ -295,7 +295,7 @@
   height: 24px;
 
   background-color: #fdfdfd;
-  mask-image: url(./img/icon_arrow-right.svg);
+  mask-image: url({{ 'c_icon_arrow-right.svg' | asset_url }});
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: cover;

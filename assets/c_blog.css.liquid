@@ -107,7 +107,7 @@
 
 @media screen and (min-width: 1024px) {
   .blog-slide {
-    width: clamp(29.375rem, 27.837rem + 2.4vw, 30rem);
+    width: clamp(29.375rem, 48rem, 48rem);
   }
 
   .blog-slide:nth-of-type(n + 3) {
@@ -134,7 +134,7 @@
 
 @media screen and (min-width: 1024px) {
   .blog-item__image {
-    width: clamp(29.375rem, 27.837rem + 2.4vw, 30rem);
+    width: clamp(29.375rem, 48rem, 48rem);
     height: 270px;
     border-radius: 24px;
   }
@@ -252,7 +252,7 @@
   height: 24px;
 
   background-color: #fdfdfd;
-  mask-image: url(./img/icon_arrow-right.svg);
+  mask-image: url({{ 'c_icon_arrow-right.svg' | asset_url }});
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: cover;
@@ -280,23 +280,7 @@
   }
 }
 
-.button--common__circle {
-}
-
-.button--blog__circle {
-}
-
-.button--common__text {
-}
-
-.button--blog__text {
-}
-
 /* ホバー時アニメーション */
-
-.blog-item {
-}
-
 .blog-item__image img {
   transition: transform 0.6s;
 }

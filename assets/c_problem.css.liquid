@@ -42,7 +42,7 @@
 }
 
 .problem__bg::before {
-  background: url(./img/bg_problem.webp) no-repeat center center / cover;
+  background: url({{ 'c_bg_problem.webp' | asset_url }}) no-repeat center center / cover;
   opacity: 0.5;
 }
 
@@ -110,20 +110,20 @@
 .problem__voice:nth-of-type(1)::before {
   width: min(299.501px, 79.73vw);
   height: min(211px, 56.27vw);
-  background: url(./img/deco_problem-item1.webp) no-repeat center center /
+  background: url({{ 'c_deco_problem-item1.webp' | asset_url }}) no-repeat center center /
     contain;
 }
 .problem__voice:nth-of-type(2)::before {
   width: min(295.501px, 78.67vw);
   height: min(211px, 56.27vw);
-  background: url(./img/deco_problem-item2.webp) no-repeat center center /
+  background: url({{ 'c_deco_problem-item2.webp' | asset_url }}) no-repeat center center /
     contain;
 }
 
 .problem__voice:nth-of-type(3)::before {
   width: min(300px, 80vw);
   height: min(211px, 56.27vw);
-  background: url(./img/deco_problem-item3.webp) no-repeat center center /
+  background: url({{ 'c_deco_problem-item3.webp' | asset_url }}) no-repeat center center /
     contain;
 }
 
@@ -140,8 +140,6 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
-  font-size: clamp(0.813rem, -0.521rem + 6.67vw, 0.938rem);
   font-weight: 700;
   line-height: 180%;
   letter-spacing: 1.2px;
@@ -178,7 +176,7 @@
 
 .problem__image {
   display: block !important;
-  background: url(./img/deco_problem.webp) no-repeat center center / contain;
+  background: url({{ 'c_deco_problem.webp' | asset_url }}) no-repeat center center / contain;
   width: 300px;
   height: 170px;
 
@@ -227,7 +225,7 @@
 .problem__solution::after {
   content: "";
   display: block;
-  background: url(./img/icon_double-arrow.png) no-repeat center center / contain;
+  background: url({{ 'c_icon_double-arrow.png' | asset_url }}) no-repeat center center / contain;
   width: 30px;
   height: 27px;
 

@@ -19,7 +19,7 @@
   display: block;
   width: 100%;
   height: 100vh;
-  background: url(./img/img_fv-sp.webp) no-repeat center center/cover;
+  background: url({{ 'c_img_fv-sp.webp' | asset_url }}) no-repeat center center/cover;
   -webkit-animation: bgLoop 180s infinite linear;
   animation: bgLoop 180s infinite linear;
 }
@@ -64,7 +64,7 @@
   }
   .fv__image::before {
     aspect-ratio: 1920/1407;
-    background: url(./img/img_fv.webp) no-repeat center center/cover;
+    background: url({{ 'c_img_fv.webp' | asset_url }}) no-repeat center center/cover;
     -webkit-animation: scaleLoop 60s infinite forwards;
     animation: scaleLoop 60s infinite forwards;
     padding-top: 71%;
@@ -101,14 +101,13 @@
 
 .fv__contents {
   position: absolute;
-  bottom: min(202px , 53.87vw);
-  /* top: clamp(23.313rem, 18.719rem + 19.6vw, 31.25rem); */
-  /* top: clamp(23.313rem, 18.719rem + 19.6vw, 31.25rem); */
+  /* bottom: min(402px , 53.87vw); */
+  top: clamp(53.313rem, 18.719rem + 19.6vw, 31.25rem);
   left: 20px;
 }
 @media screen and (min-width: 1024px) {
   .fv__contents {
-    bottom: min(149px , 10.35vw);
+    /* bottom: min(149px , 10.35vw); */
     /* top: max(28.4vw, 409px); */
     left: initial;
     right: calc(50% + 41px);
@@ -141,7 +140,7 @@
 @media screen and (min-width: 1024px) {
   .fv__lead1,
   .fv__lead2 {
-    font-size: clamp(1.75rem, -1.327rem + 4.81vw, 3rem);
+    font-size: clamp(1.75rem, -1.327rem + 4.81vw, 4.8rem);
     letter-spacing: 4.8px;
   }
 }
@@ -184,11 +183,102 @@
 @media screen and (min-width: 1024px) {
   .fv__description1,
   .fv__description2 {
-    font-size: clamp(1rem, -0.231rem + 1.92vw, 1.5rem);
+    font-size: clamp(1rem, -0.231rem + 1.92vw, 2.4rem);
     letter-spacing: 1.92px;
   }
 }
 
 .fv__description2 {
   margin-top: 2px;
+}
+
+
+
+/* to contact */
+.to-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 30;
+  width: 72px;
+  height: 72px;
+  background-color: #f5b561;
+  border-radius: 50%;
+  border: 2px solid #fdfdfd;
+  display: block !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .to-contact {
+    top: initial;
+    bottom: 80px;
+    right: 80px;
+    width: clamp(4.5rem, 12rem, 12rem);
+    height: clamp(4.5rem, 12rem, 12rem);
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .to-contact::before {
+    content: "お問い合わせ";
+    color: #fdfdfd;
+    font-size: clamp(0.75rem, 1.4rem, 1.4rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+    white-space: nowrap;
+
+    position: absolute;
+    top: min(28px , 1.94vw);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.to-contact::after {
+  content: "";
+  mask-image: url({{ 'c_icon_mail.svg' | asset_url }});
+  background-color: #fdfdfd;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+
+  display: block;
+  width: 28px;
+  height: 22px;
+  flex-shrink: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  .to-contact::after {
+    width: clamp(2.5rem, 5rem, 5rem);
+    height: clamp(1.75rem, 3.5rem, 3.5rem);
+    top: min(57px , 3.96vw);
+    transform: translateX(-50%);
+  }
+}
+
+/* to-contactホバー時アニメーション */
+.to-contact {
+transition: all 0.3s;
+}
+
+.to-contact:hover {
+  background-color: #fdfdfd;
+  border: 1px solid #f5b561;
+}
+
+.to-contact:hover::before {
+  color: #f5b561;
+}
+
+.to-contact:hover::after {
+  background-color: #f5b561;
 }

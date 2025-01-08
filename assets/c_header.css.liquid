@@ -1,0 +1,48 @@
+.header-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  z-index: 100;
+  background: rgba(234, 246, 243, 0.3);
+}
+
+.header-wrapper--border-bottom {
+  border-bottom: none;
+}
+
+.header__icon.no-before::before {
+  content: none !important;
+}
+
+
+@media screen and (max-width: 989px) {
+  .menu-drawer__menu-item {
+    background-color: transparent!important;
+  }
+
+  .menu-drawer {
+    background-color: #EAF6f3!important;
+  }
+
+  .menu-drawer__menu {
+    background-color: #fff;
+    margin-left: 20px!important;
+    margin-right: 20px!important;
+    border-radius: 10px!important;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+  }
+
+  li:nth-child(-n+5) {
+    border-bottom: 1px solid #9CDDDE;
+    width: 90%;
+    margin: 0 auto;
+  }
+  li:nth-child(6) {
+    border-bottom: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

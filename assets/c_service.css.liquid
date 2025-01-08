@@ -31,7 +31,7 @@
 .service__bg {
   position: absolute;
   display: block !important;
-  background: url(./img/deco_circle-bg.png) no-repeat center center / cover;
+  background: url({{ 'c_deco_circle-bg.png' | asset_url }}) no-repeat center center / cover;
   top: 226px;
   left: 0;
   width: 100%;
@@ -41,7 +41,7 @@
 
 @media screen and (min-width: 1024px) {
   .service__bg {
-    background: url(./img/deco_circle-bg-pc.webp) no-repeat center center / cover;
+    background: url({{ 'c_deco_circle-bg-pc.webp' | asset_url }}) no-repeat center center / cover;
     height: max(368px , 25.56vw);
     top: 306px;
   }
@@ -108,7 +108,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
   width: 320px;
   margin-inline: auto;
 }

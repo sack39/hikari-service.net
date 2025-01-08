@@ -48,7 +48,7 @@
 @media screen and (min-width: 1024px) {
   .about__contents {
     margin-top: 56px;
-    width: clamp(31.313rem, 15.313rem + 25vw, 32.5rem);
+    width: clamp(31.313rem, 15.313rem + 25vw, 52rem);
   }
 }
 
@@ -111,7 +111,7 @@
   height: 355px;
   flex-shrink: 0;
   border-radius: 50%;
-  background-image: url(./img/img_about.webp);
+  background-image: url({{ 'c_img_about.webp' | asset_url }});
   background-repeat: no-repeat;
   background-position: 75% 50%;
   background-size: cover;
@@ -135,9 +135,9 @@
 
 @media screen and (min-width: 1024px) {
   .about__image-main {
-    width: clamp(31.25rem, 11.039rem + 31.58vw, 32.75rem);
-    height: clamp(31.25rem, 11.039rem + 31.58vw, 32.75rem);
-    margin-top: 20px;
+    width: clamp(31.25rem, 11.039rem + 31.58vw, 52.4rem);
+    height: clamp(31.25rem, 11.039rem + 31.58vw, 52.4rem);
+    margin-top: 120px;
   }
 
   .about__image-main::after {
@@ -226,7 +226,7 @@
 
 .about__image-people {
   display: block;
-  background: url(./img/deco_about1.webp) no-repeat center center / cover;
+  background: url({{ 'c_deco_about1.webp' | asset_url }}) no-repeat center center / cover;
   width: 202px;
   height: 137px;
   flex-shrink: 0;
@@ -250,7 +250,7 @@
 
 .about__image-man {
   display: block;
-  background: url(./img/deco_about2.webp) no-repeat center center / cover;
+  background: url({{ 'c_deco_about2.webp' | asset_url }}) no-repeat center center / cover;
   width: 65px;
   height: 139px;
   flex-shrink: 0;

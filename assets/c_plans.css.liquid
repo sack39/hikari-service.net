@@ -31,7 +31,7 @@
 .plans__bg {
   position: absolute;
   display: block !important;
-  background: url(./img/deco_circle-bg.png) no-repeat center center / cover;
+  background: url({{ 'c_deco_circle-bg.png' | asset_url }}) no-repeat center center / cover;
   top: 434px;
   left: 0;
   width: 100%;
@@ -40,7 +40,7 @@
 
 @media screen and (min-width: 1024px) {
   .plans__bg {
-    background: url(./img/deco_circle-bg-pc.webp) no-repeat center center /
+    background: url({{ 'c_deco_circle-bg-pc.webp' | asset_url }}) no-repeat center center /
       cover;
     height: max(368px, 25.56vw);
     top: initial;
@@ -64,6 +64,7 @@
 
 .plans__heading-description {
   margin-top: 40px;
+  text-align: left;
 }
 
 @media screen and (min-width: 1024px) {
@@ -97,7 +98,7 @@
 
   border: 2px solid #4ac8c7;
   background: #fdfdfd;
-  width: clamp(19.375rem, -5.625rem + 125vw, 20.938rem);
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -239,7 +240,7 @@
   > .price-item__target-image {
   width: 84px;
   height: 84px;
-  background: url(./img/deco_plan1.webp) no-repeat center center / cover;
+  background: url({{ 'c_deco_plan1.webp' | asset_url }}) no-repeat center center / cover;
 }
 
 .price-item__bg:nth-of-type(2)
@@ -249,7 +250,7 @@
   > .price-item__target-image {
   width: 84px;
   height: 84px;
-  background: url(./img/deco_plan2.webp) no-repeat center center / cover;
+  background: url({{ 'c_deco_plan2.webp' | asset_url }}) no-repeat center center / cover;
 }
 
 .price-item__bg:nth-of-type(3)
@@ -259,14 +260,14 @@
   > .price-item__target-image {
   width: 86px;
   height: 81px;
-  background: url(./img/deco_plan3.webp) no-repeat center center / cover;
+  background: url({{ 'c_deco_plan3.webp' | asset_url }}) no-repeat center center / cover;
 }
 
 @media screen and (min-width: 1024px) {
   .price-item__bg:nth-of-type(3)
   > .price-item
     > .price-item__contents
-    > .price-item__target
+    > .price-item__targetz
     > .price-item__target-image {
     width: 84px;
     height: 84px;
@@ -288,7 +289,6 @@
 
 @media screen and (min-width: 1024px) {
   .price-item__target-item {
-    font-size: clamp(0.813rem, 0.449rem + 0.57vw, 0.875rem);
     letter-spacing: 1.12px;
     white-space: nowrap;
   }

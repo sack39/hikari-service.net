@@ -1,6 +1,6 @@
 .contact {
   padding-block: 40px;
-  background: url(./img/bg_contact.webp) no-repeat center center / cover;
+  background: url({{ 'c_bg_contact.webp' | asset_url }}) no-repeat center center / cover;
 }
 
 @media screen and (min-width: 768px) {
@@ -103,7 +103,7 @@
 }
 
 .button--contact__circle::after {
-  mask-image: url(./img/icon_mail.svg);
+  mask-image: url({{ 'c_icon_mail.svg' | asset_url }});
   background-color: #f5b561;
   width: 21px;
   height: 16px;

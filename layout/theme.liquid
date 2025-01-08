@@ -296,6 +296,26 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    {% comment %} 追加 c_base.css {% endcomment %}
+    {{ 'c_base.css' | asset_url | stylesheet_tag }}
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Splide cdn(css) -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"/>
+
+    <!-- scroll hint -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css"
+    />
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -374,12 +394,18 @@
     {%- endif -%}
 
 
+    <!-- scroll hint -->
+    <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+
     <!-- splide/autoscroll cdn(js) -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
+
+    <!-- 追加 c_script.js -->
+    <script src="{{ 'c_script.js' | asset_url }}"></script>
+
   </body>
 </html>

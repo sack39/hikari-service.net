@@ -128,7 +128,6 @@
 }
 
 .feature-item__title-text {
-  font-size: clamp(0.875rem, -0.58rem + 7.27vw, 1.125rem);
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
@@ -222,22 +221,21 @@
   .feature-item__infographic-item:nth-child(1) {
     border-top-left-radius: 24px;
   }
-  
+
   .feature-item__infographic-item:nth-child(2) {
     border-top-right-radius: 24px;
     transition-delay: 0.5s;
   }
-  
+
   .feature-item__infographic-item:nth-child(3) {
     border-bottom-left-radius: 24px;
     transition-delay: 1s;
   }
-  
+
   .feature-item__infographic-item:nth-child(4) {
     border-bottom-right-radius: 24px;
     transition-delay: 1.5s;
   }
-  
 }
 
 /* hokkaido */
@@ -250,7 +248,7 @@
   > .feature-item__title::after {
   content: "";
   position: absolute;
-  background: url(./img/deco_features.webp) no-repeat center center / contain;
+  background: url({{ 'c_deco_features.webp' | asset_url }}) no-repeat center center / contain;
   width: 98.643px;
   height: 96.349px;
   top: -22px;

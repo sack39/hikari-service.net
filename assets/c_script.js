@@ -156,21 +156,21 @@ document.querySelectorAll('.menu-drawer__menu-item').forEach(item => {
   item.addEventListener('click', () => {
     const detailsMenu = document.getElementById('Details-menu-drawer-container');
     const headerIcon = document.querySelector('.header__icon');
-
     if (detailsMenu) {
       detailsMenu.removeAttribute('open');
     }
-
     if (headerIcon) {
       headerIcon.classList.add('no-before');
     }
 
-    bodyのoverflowクラスを削除
     document.body.classList.remove(
-      'overflow-hidden-mobile',
-      'overflow-hidden-tablet',
+      'overflow-hidden-mobile', 
+      'overflow-hidden-tablet', 
       'overflow-hidden-desktop'
     );
+
+    document.body.style.overflow = 'auto';
   });
 });
+
 

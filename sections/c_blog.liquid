@@ -30,138 +30,55 @@
             ></button>
           </div>
           <div class="splide__track splide-blog__track js-scrollable">
+
+            {% assign blog_handle = 'news' %}
             <ul class="splide__list splide-blog__list">
-
-              <li class="splide__slide blog-slide">
-                <a href="" class="blog-item" target="_blank">
-                  <div class="blog-item__image">
-                    <img
-                      src="{{ 'c_img_blog1.webp' | asset_url }}"
-                      alt=""
-                      width="250"
-                      height="167"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="blog-item__info">
-                    <time class="blog-item__date" datetime="2023-01-15"
-                      >2023.01.15</time
-                    >
-                    <h3 class="blog-item__title">地域での活動について</h3>
-                    <p class="blog-item__text">
-                      ひかりサービスは、Web制作の仕事だけではなく、2013年より地域に根ざした障害者支援サービスも行っています。現在では、関連会社あわせて北海道空知地方全域での障害児及び障害者の支援を行っています。
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="splide__slide blog-slide">
-                <a href="" class="blog-item" target="_blank">
-                  <div class="blog-item__image">
-                    <img
-                      src="{{ 'c_img_blog2.webp' | asset_url }}"
-                      alt=""
-                      width="250"
-                      height="167"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="blog-item__info">
-                    <time class="blog-item__date" datetime="2023-01-08"
-                      >2023.01.08</time
-                    >
-                    <h3 class="blog-item__title">
-                      Webに関する様々なサービスを行っています
-                    </h3>
-                    <p class="blog-item__text">
-                      ホームページ作成やインターネットショッピングサイト作成の他にも、LINEでお客様の再来を促すLINE構築の仕事や、デザインのお仕事、クラウドファンディングの制作支援なども行っています。
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="splide__slide blog-slide">
-                <a href="" class="blog-item" target="_blank">
-                  <div class="blog-item__image">
-                    <img
-                      src="{{ 'c_img_blog1.webp' | asset_url }}"
-                      alt=""
-                      width="250"
-                      height="167"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="blog-item__info">
-                    <time class="blog-item__date" datetime="2023-01-15"
-                      >2023.01.15</time
-                    >
-                    <h3 class="blog-item__title">地域での活動について</h3>
-                    <p class="blog-item__text">
-                      ひかりサービスは、Web制作の仕事だけではなく、2013年より地域に根ざした障害者支援サービスも行っています。現在では、関連会社あわせて北海道空知地方全域での障害児及び障害者の支援を行っています。
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="splide__slide blog-slide">
-                <a href="" class="blog-item" target="_blank">
-                  <div class="blog-item__image">
-                    <img
-                      src="{{ 'c_img_blog2.webp' | asset_url }}"
-                      alt=""
-                      width="250"
-                      height="167"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="blog-item__info">
-                    <time class="blog-item__date" datetime="2023-01-08"
-                      >2023.01.08</time
-                    >
-                    <h3 class="blog-item__title">
-                      Webに関する様々なサービスを行っています
-                    </h3>
-                    <p class="blog-item__text">
-                      ホームページ作成やインターネットショッピングサイト作成の他にも、LINEでお客様の再来を促すLINE構築の仕事や、デザインのお仕事、クラウドファンディングの制作支援なども行っています。
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="splide__slide blog-slide">
-                <a href="" class="blog-item" target="_blank">
-                  <div class="blog-item__image">
-                    <img
-                      src="{{ 'c_img_blog1.webp' | asset_url }}"
-                      alt=""
-                      width="250"
-                      height="167"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="blog-item__info">
-                    <time class="blog-item__date" datetime="2023-01-15"
-                      >2023.01.15</time
-                    >
-                    <h3 class="blog-item__title">地域での活動について</h3>
-                    <p class="blog-item__text">
-                      ひかりサービスは、Web制作の仕事だけではなく、2013年より地域に根ざした障害者支援サービスも行っています。現在では、関連会社あわせて北海道空知地方全域での障害児及び障害者の支援を行っています。
-                    </p>
-                  </div>
-                </a>
-              </li>
+              {% for article in blogs[blog_handle].articles limit: 5 %}
+                <li class="splide__slide blog-slide">
+                  <a href="{{ article.url }}" class="blog-item" target="_blank">
+                    <div class="blog-item__image">
+                      {% if article.image %}
+                        <img
+                          src="{{ article.image | img_url: '1000x668' }}"
+                          alt="{{ article.title }}"
+                          width="250"
+                          height="167"
+                          loading="lazy"
+                        />
+                      {% else %}
+                        <img
+                          src="{{ 'c_img_blog1.webp' | asset_url }}"
+                          alt="{{ article.title }}"
+                          width="250"
+                          height="167"
+                          loading="lazy"
+                        />
+                      {% endif %}
+                    </div>
+                    <div class="blog-item__info">
+                      <time class="blog-item__date" datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+                        {{ article.published_at | date: '%Y.%m.%d' }}
+                      </time>
+                      <h3 class="blog-item__title">{{ article.title }}</h3>
+                      <p class="blog-item__text">
+                        {{ article.content | strip_html | truncate: 100 }}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
             </ul>
+
+
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <a href="" class="button--common button--blog js-in-view fade-in">
+  <a href="{{ blogs.news.url }}" class="button--common button--blog js-in-view fade-in">
     <span class="button--common__circle button--blog__circle"></span>
-    <span class="button--common__text button--blog__text"
-      >ブログ一覧をみる</span
-    >
+    <span class="button--common__text button--blog__text">ブログ一覧をみる</span>
   </a>
 </section>
 

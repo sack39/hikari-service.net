@@ -33,7 +33,7 @@
 
             {% assign blog_handle = 'news' %}
             <ul class="splide__list splide-blog__list">
-              {% for article in blogs[blog_handle].articles limit: 5 %}
+              {% for article in blogs[blog_handle].articles %}
                 <li class="splide__slide blog-slide">
                   <a href="{{ article.url }}" class="blog-item" target="_blank">
                     <div class="blog-item__image">

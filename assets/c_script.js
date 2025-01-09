@@ -165,12 +165,12 @@ document.querySelectorAll('.menu-drawer__menu-item').forEach(item => {
       headerIcon.classList.add('no-before');
     }
 
-    // bodyのoverflowクラスを削除
-    // document.body.classList.remove(
-    //   'overflow-hidden-mobile',
-    //   'overflow-hidden-tablet',
-    //   'overflow-hidden-desktop'
-    // );
+    bodyのoverflowクラスを削除
+    document.body.classList.remove(
+      'overflow-hidden-mobile',
+      'overflow-hidden-tablet',
+      'overflow-hidden-desktop'
+    );
   });
 });
 

@@ -316,9 +316,9 @@
 
     {% comment %} header出し分け {% endcomment %}
     {% if template.name == 'index' %}
-      {{ 'c_header_top-page-only.css' | asset_url | stylesheet_tag }}
+      {{ 'c_top-page-only.css' | asset_url | stylesheet_tag }}
     {% else %}
-      {{ 'c_header_without-top-page.css' | asset_url | stylesheet_tag }}
+      {{ 'c_without-top-page.css' | asset_url | stylesheet_tag }}
     {% endif %}
   </head>
 

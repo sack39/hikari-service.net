@@ -166,11 +166,11 @@ document.querySelectorAll('.menu-drawer__menu-item').forEach(item => {
     }
 
     // bodyのoverflowクラスを削除
-    document.body.classList.remove(
-      // 'overflow-hidden-mobile',
-      // 'overflow-hidden-tablet',
-      'overflow-hidden-desktop'
-    );
+    // document.body.classList.remove(
+    //   'overflow-hidden-mobile',
+    //   'overflow-hidden-tablet',
+    //   'overflow-hidden-desktop'
+    // );
   });
 });
 

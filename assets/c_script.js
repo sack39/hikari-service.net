@@ -43,7 +43,6 @@ new Splide(".splide-blog", {
   autoWidth: true,
   trimSpace: true,
   clones: 0,
-
   mediaQuery: "min",
   breakpoints: {
     1024: {

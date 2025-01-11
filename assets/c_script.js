@@ -42,8 +42,7 @@ new Splide(".splide-blog", {
   autoWidth: true,
   trimSpace: false,
   padding: {
-    right: '40px', // 右側の余白を明示的に指定
-    left: '20px'
+    right: '20px', // 右側の余白を明示的に指定
   },
   clones: 0,
   mediaQuery: "min",

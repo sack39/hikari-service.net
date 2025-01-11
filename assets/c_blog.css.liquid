@@ -46,6 +46,19 @@
   width: 100vw;
 }
 
+.splide-blog .splide__slide {
+  scroll-snap-align: start;
+}
+
+.splide-blog .splide__slide:first-child {
+  margin-left: 0; /* margin-leftを0に */
+  padding-left: 20px;
+}
+
+.splide-blog .splide__slide:last-child {
+  padding-right: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .blog__lists-inner {
   padding-left: clamp(1.25rem, -2.5rem + 7.81vw, 2.5rem);

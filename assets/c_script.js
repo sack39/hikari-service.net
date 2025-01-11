@@ -55,6 +55,10 @@ new Splide(".splide-blog", {
     prev: "splide__arrow--prev blog-item__button-prev",
     next: "splide__arrow--next blog-item__button-next",
   },
+  padding: {
+    left: '20px',
+    right: '20px'
+  },
 }).mount();
 
 

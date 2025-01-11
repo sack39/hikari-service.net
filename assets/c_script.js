@@ -35,31 +35,27 @@ new Splide(".splide-works", {
 }).mount(window.splide.Extensions);
 
 // blog splide
-document.addEventListener('DOMContentLoaded', () => {
-  new Splide(".splide-blog", {
-    type: "loop",
-    arrows: true,
-    pagination: false,
-    gap: 12,
-    autoWidth: true,
-    trimSpace: true,
-    clones: 0,
-    mediaQuery: "min",
-    breakpoints: {
-      1024: {
-        destroy: true,
-      },
+new Splide(".splide-blog", {
+  arrows: true,
+  pagination: false,
+  gap: 12,
+  autoWidth: true,
+  trimSpace: true,
+  clones: 0,
+  mediaQuery: "min",
+  breakpoints: {
+    1024: {
+      destroy: true,
     },
+  },
 
-    classes: {
-      arrows: "splide__arrows blog-item__arrows",
-      arrow: "splide__arrow blog-item__arrow",
-      prev: "splide__arrow--prev blog-item__button-prev",
-      next: "splide__arrow--next blog-item__button-next",
-    },
-  }).mount();
-});
-
+  classes: {
+    arrows: "splide__arrows blog-item__arrows",
+    arrow: "splide__arrow blog-item__arrow",
+    prev: "splide__arrow--prev blog-item__button-prev",
+    next: "splide__arrow--next blog-item__button-next",
+  },
+}).mount();
 
 
 // blog 文字制限

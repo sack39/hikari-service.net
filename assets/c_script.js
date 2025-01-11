@@ -40,7 +40,7 @@ new Splide(".splide-blog", {
   pagination: false,
   gap: 12,
   autoWidth: true,
-  trimSpace: true,
+  trimSpace: false,
   clones: 0,
   mediaQuery: "min",
   breakpoints: {

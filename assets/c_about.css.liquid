@@ -24,6 +24,8 @@
 
 .about__wrap {
   padding-inline: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -107,8 +109,8 @@
 
 .about__image-main {
   display: block;
-  width: 355px;
-  height: 355px;
+  width: 355px!important;
+  height: 355px!important;
   flex-shrink: 0;
   border-radius: 50%;
   background-image: url({{ 'c_img_about.webp' | asset_url }});
@@ -122,8 +124,8 @@
 .about__image-main::after {
   content: "";
   position: absolute;
-  width: 355px;
-  height: 355px;
+  width: 355px!important;
+  height: 355px!important;
   border-radius: 50%;
   background: linear-gradient(
     180deg,

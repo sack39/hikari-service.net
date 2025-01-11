@@ -36,7 +36,7 @@ new Splide(".splide-works", {
 
 // blog splide
 new Splide(".splide-blog", {
-  drag: 'free',
+  type: "loop",
   arrows: true,
   pagination: false,
   gap: 12,

@@ -36,8 +36,7 @@ new Splide(".splide-works", {
 
 // blog splide
 new Splide(".splide-blog", {
-  type: "loop",
-  focus: "center",
+  type: "slide",
   arrows: true,
   pagination: false,
   gap: 12,

@@ -41,7 +41,7 @@ new Splide(".splide-blog", {
   pagination: false,
   gap: 12,
   autoWidth: true,
-  trimSpace: false,
+  trimSpace: true,
   clones: 0,
   mediaQuery: "min",
   breakpoints: {
@@ -57,6 +57,7 @@ new Splide(".splide-blog", {
     next: "splide__arrow--next blog-item__button-next",
   },
 }).mount();
+
 
 
 // blog 文字制限
@@ -173,5 +174,3 @@ document.querySelectorAll('.menu-drawer__menu-item').forEach(item => {
     document.body.style.overflow = 'auto';
   });
 });
-
-

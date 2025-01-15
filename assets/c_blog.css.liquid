@@ -57,7 +57,7 @@
 
 @media screen and (min-width: 768px) {
   .blog__lists-inner {
-  padding-left: clamp(1.25rem, -2.5rem + 7.81vw, 2.5rem);
+  /* padding-left: clamp(1.25rem, -2.5rem + 7.81vw, 2.5rem); */
   }
 }
 
@@ -88,15 +88,27 @@
 
 .blog-slide {
   width: 250px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media screen and (min-width: 1024px) {
   .blog-slide {
     width: clamp(29.375rem, 48rem, 48rem);
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .blog-slide:nth-of-type(n + 3) {
     display: none;
+  }
+
+  .blog-item__image {
+    width: clamp(29.375rem, 48rem, 48rem);
+  }
+
+  .blog-item__text {
+    width: clamp(29.375rem, 48rem, 48rem);
   }
 }
 

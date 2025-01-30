@@ -63,10 +63,15 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "c_plans_wJkm6j": {
+      "type": "c_plans",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "image_with_text_tBwzrX"
+    "image_with_text_tBwzrX",
+    "c_plans_wJkm6j"
   ]
 }

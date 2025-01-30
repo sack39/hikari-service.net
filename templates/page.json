@@ -33,11 +33,20 @@
             "text": "<p>合同会社ひかりサービスで、ホームページ制作やインターネットショッピングサイトの制作をしませんか？</p><p>インターネットに詳しくなくても丁寧に操作方法などを丁寧にお教えします。</p><p>お客様をご紹介いただいた方には、キャッシュバックもございますので、ぜひご連絡お待ちしております！</p>",
             "text_style": "body"
           }
+        },
+        "button_kCMA7k": {
+          "type": "button",
+          "settings": {
+            "button_label": "お問い合わせはこちらから",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "heading_Ct4ryR",
-        "text_PwE6kA"
+        "text_PwE6kA",
+        "button_kCMA7k"
       ],
       "settings": {
         "image": "shopify://shop_images/d8bc9bd4453d36f37c65a9f90187e2e9.png",

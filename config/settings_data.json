@@ -143,6 +143,17 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "10504199512241744996": {
+        "type": "shopify://apps/saku/blocks/saku-order-printer-buttons/019a6a9b-4f3d-7daa-8c68-bff7e7147a76",
+        "disabled": false,
+        "settings": {
+          "theme_type": "dawn",
+          "button_background_color": "#000",
+          "button_text_color": "#fff"
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {

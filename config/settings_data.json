@@ -150,9 +150,9 @@
         "settings": {
           "theme_type": "dawn",
           "show_receipt": true,
-          "show_invoice": true,
-          "show_quotation": true,
-          "show_delivery_note": true,
+          "show_invoice": false,
+          "show_quotation": false,
+          "show_delivery_note": false,
           "button_background_color": "#334fb4",
           "button_text_color": "#ffffff"
         }
